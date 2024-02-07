@@ -14,7 +14,7 @@ public class FraseService {
 	private FraseRepository fraseRepository;
 
 	public FraseDto obterFraseAleatoria() {
-		Frase frase = fraseRepository.findById(2l).get();
+		Frase frase = fraseRepository.buscaFraseAleatoria();
 		return new FraseDto(frase.getTitulo(), frase.getFrase(), frase.getPersonagem(), frase.getPoster());
 	}
 	
